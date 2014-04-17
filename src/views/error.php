@@ -15,7 +15,7 @@
     }
     body {
         font-family: "Titillium Web", sans-serif;
-        font-size: 16px;
+        font-size: 20px;
         color: <?=Config::get('404::colors.copy');?>;
     }
     div {
@@ -31,6 +31,8 @@
         margin: 0;
     }
     h2 {
+        font-size: 2em;
+        line-height: 1;
         color: <?=Config::get('404::colors.title');?>;
     }
     p {
