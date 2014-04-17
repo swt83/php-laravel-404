@@ -8,18 +8,15 @@
 <meta http-equiv="content-language" content="en-US"/>
 <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
 
+<link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,700' rel='stylesheet' type='text/css'>
 <style type="text/css">
     html {
-        background: #f2f4f2;
+        background: <?=Config::get('404::colors.background');?>;
     }
     body {
-        font-family: "Helvetica Neue","Helvetica","Arial","sans-serif";
-        -webkit-text-shadow: 0 1px 0px #fff;
-        -moz-text-shadow: 0 1px 0px #fff;
-        -o-text-shadow: 0 1px 0px #fff;
-        text-shadow: 0 1px 0px #fff;
+        font-family: "Titillium Web", sans-serif;
         font-size: 16px;
-        color:#7b7a76;
+        color: <?=Config::get('404::colors.copy');?>;
     }
     div {
         margin: 50px auto;
@@ -30,15 +27,24 @@
         line-height: 1;
         font-size: 10em;
         font-weight: 900;
-        color: #cead48;
+        color: <?=Config::get('404::colors.number');?>;
         margin: 0;
+    }
+    h2 {
+        color: <?=Config::get('404::colors.title');?>;
     }
     p {
         line-height: 1.5;
+        color: <?=Config::get('404::colors.copy');?>;
+        margin-bottom: 2em;
     }
     a {
-        color: #ddc784;
+        background: <?=Config::get('404::colors.link');?>;
+        color: #fff;
+        text-transform: uppercase;
         font-weight: 900;
+        text-decoration: none;
+        padding: 7px 20px;
     }
 </style>
 
@@ -67,10 +73,12 @@
 
     $error = isset($map[$code]) ? $map[$code] : $map[500];
 
-    echo '<h1>'.$code.'</h1>';
-    echo '<h2>'.$error['name'].'</h2>';
+    echo '<hgroup>';
+        echo '<h1>'.$code.'</h1>';
+        echo '<h2>'.$error['name'].'</h2>';
+    echo '</hgroup>';
     echo '<p>'.$error['copy'].'</p>';
-    echo $code != 503 ? '<p><a href="'.URL::to('/').'">Go back to the home page</a>.</p>' : '';
+    echo $code != 503 ? '<p><a href="'.URL::to('/').'">Go Back</a></p>' : '';
 
     ?>
 </div>

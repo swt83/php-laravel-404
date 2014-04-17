@@ -25,6 +25,9 @@ class Provider extends ServiceProvider {
 
         // register package
         $this->package('travis/404', null, $src);
+
+        // include routes
+        include $src.'routes.php';
     }
 
     /**

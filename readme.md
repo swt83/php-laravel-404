@@ -14,6 +14,10 @@ Register the service provider in your ``app/config/app.php`` file:
 'Travis\Error404\Provider'
 ```
 
+### Config
+
+Copy the config file to ``app/config/packages/travis/404/config.php`` and input the necessary information.
+
 ## Usage
 
 Open ``bootstrap/start.php`` and patch the environment:
@@ -50,4 +54,10 @@ Open ``app/config/app.php`` and patch the debug option:
 
 ```php
 'debug' => isset($_SERVER['LARAVEL_ENV']) ? false : true,
+```
+
+You can see what the page looks like by pointing your browser here:
+
+```
+http://<YOURDOMAIN>/404
 ```
