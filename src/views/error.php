@@ -8,13 +8,13 @@
 <meta http-equiv="content-language" content="en-US"/>
 <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
 
-<link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
 <style type="text/css">
     html {
         background: <?=Config::get('404::colors.background');?>;
     }
     body {
-        font-family: "Titillium Web", sans-serif;
+        font-family: "Abel", sans-serif;
         font-size: 20px;
         color: <?=Config::get('404::colors.copy');?>;
     }
@@ -33,6 +33,7 @@
     h2 {
         margin: 0;
         font-size: 2em;
+        text-transform: uppercase;
         color: <?=Config::get('404::colors.title');?>;
     }
     p {
