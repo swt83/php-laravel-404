@@ -31,14 +31,14 @@
         margin: 0;
     }
     h2 {
+        margin: 0;
         font-size: 2em;
-        line-height: 1;
         color: <?=Config::get('404::colors.title');?>;
     }
     p {
+        margin: 0 0 2em 0;
         line-height: 1.5;
         color: <?=Config::get('404::colors.copy');?>;
-        margin-bottom: 2em;
     }
     a {
         background: <?=Config::get('404::colors.link');?>;
