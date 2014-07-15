@@ -8,7 +8,7 @@
 <meta http-equiv="content-language" content="en-US"/>
 <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
 
-<link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
 <style type="text/css">
     html {
         background: <?=Config::get('404::colors.background');?>;
