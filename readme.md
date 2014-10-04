@@ -34,9 +34,11 @@ Open ``app/start/global.php`` and patch the error handling:
 ```php
 App::error(function(Exception $exception, $code)
 {
-    if ($exception instanceof Symfony\Component\HttpKernel\Exception\NotFoundHttpException) return;
-
-    Log::error($exception);
+    $test = $exception instanceof Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+    if (!$test)
+    {
+        Log::error($exception);
+    }
 
     if (!Config::get('app.debug'))
     {
