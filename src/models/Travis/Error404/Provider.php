@@ -7,27 +7,25 @@ use Illuminate\Support\ServiceProvider;
 class Provider extends ServiceProvider {
 
     /**
-     * Indicates if loading of the provider is deferred.
-     *
-     * @var bool
-     */
-    protected $defer = false;
-
-    /**
      * Bootstrap the application events.
      *
      * @return void
      */
     public function boot()
     {
-        // set root
-        $src = __DIR__.'/../../../';
+        $dir = __DIR__.'/../../../';
 
-        // register package
-        $this->package('travis/404', null, $src);
+        // publish
+        $this->publishes([
+            $dir.'config/error404.php' => config_path('error404.php'),
+            $dir.'views/errors' => base_path('resources/views/errors'),
+        ]);
 
-        // include routes
-        include $src.'routes.php';
+        // load views
+        $this->loadViewsFrom($dir.'views', 'error404');
+
+        // load routes
+        include $dir.'routes.php';
     }
 
     /**
@@ -38,16 +36,6 @@ class Provider extends ServiceProvider {
     public function register()
     {
         //
-    }
-
-    /**
-     * Get the services provided by the provider.
-     *
-     * @return array
-     */
-    public function provides()
-    {
-        return array();
     }
 
 }
