@@ -42,8 +42,8 @@
         color: {{ Config::get('error404.colors.copy') }};
     }
     a {
-        background: {{ Config::get('error404.colors.link') }};
-        color: #fff;
+        background: {{ Config::get('error404.colors.link_background') }};
+        color: {{ Config::get('error404.colors.link') }};
         text-transform: uppercase;
         font-weight: 900;
         text-decoration: none;
