@@ -22,7 +22,7 @@ Publish the config and view files:
 $ php artisan vendor:publish
 ```
 
-## Config
+### Config
 
 Edit the published ``config/error404.php`` file as necessary.
 
