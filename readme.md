@@ -11,7 +11,7 @@ Normal install via Composer.
 Register the service provider in your ``config/app.php`` file:
 
 ```php
-'Travis\Error404\Provider',
+Travis\Error404\Provider::class,
 ```
 
 ### Publish
