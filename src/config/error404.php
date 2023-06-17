@@ -19,6 +19,10 @@ return [
     # http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html
 	#################################################
     'codes' => [
+        401 => [
+            'name' => 'Unauthorized',
+            'copy' => 'The page you requested is unauthorized.',
+        ],
     	404 => [
             'name' => 'Not Found',
             'copy' => 'The page you requested could not be found.',
@@ -29,7 +33,7 @@ return [
         ],
         503 => [
             'name' => 'Service Unavailable',
-            'copy' => 'This website is temporarily‎ down for maintenance.',
+            'copy' => 'This website is temporarily down for maintenance.',
         ],
     ],
 
